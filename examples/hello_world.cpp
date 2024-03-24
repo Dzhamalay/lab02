@@ -4,9 +4,9 @@
 int main()          
 {         
         std::cout << "Enter your name: ";
-        string name; //variable declaration
-        std::cin >> name; //name request
-        std::cout >> "Hello World from " << name << std::endl; //prints the text 
+        string name; //объявление переменной
+        std::cin >> name; //запрос имени
+        std::cout >> "Hello World from " << name << std::endl; //печатает текст 
         return 0;                                   
 
 }

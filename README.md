@@ -329,3 +329,52 @@ Current task: 1
 $ git branch patch2
 ```
 
+____
+Current task: 2
+
+2. Измените стиль кода с помощью утилиты clang-format . Например, используя вариант -style=Mozilla.
+
+script:
+```shell
+$ touch .clang-format
+$ clang-format -style=llvm -dump-config > .clang-format
+```
+
+
+____
+Current task: 3
+
+3. commit , push , создайте pull-request patch2 -> master.
+
+```shell
+$ git commit -m "added file .clang-format and changed the style of code"
+[patch2 1049e35] added file .clang-format and changed the style of code
+ 5 files changed, 587 insertions(+), 13 deletions(-)
+ create mode 100644 .clang-form
+ create mode 100644 .clang-format
+ create mode 100644 a.out
+$ git push -u origin patch2
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 4.96 KiB | 1.65 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'patch2' on GitHub by visiting:
+remote:      https://github.com/Dzhamalay/lab02/pull/new/patch2
+remote: 
+To https://github.com/Dzhamalay/lab02
+ * [new branch]      patch2 -> patch2
+Branch 'patch2' set up to track remote branch 'patch2' from 'origin'.
+```
+
+
+____
+Current task: 4
+
+4. В ветке мастера в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
+
+
+
+

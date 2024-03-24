@@ -1,5 +1,7 @@
 ## Laboratory work II
 
+# Part 1
+
 Current task: 1
 
 1. Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com).
@@ -98,33 +100,35 @@ $ git commit examples/hello_world.cpp -m "file hello_world.cpp was changed"
 ____
 Current task: 8
 
-8.
+8. Запуште изменения в удалёный репозиторий.
 
 script:
 ```shell
-
+$ git push -u origin main
 ```
 
 
 ____
 Current task: 9
 
-9.
+9. Проверьте, что история коммитов доступна в удалёный репозитории.
 
-script:
-```shell
 
-```
 
+
+# Part 2
 
 ____
-Current task: 10
+Current task: 1
 
-10.
+1. В локальной копии репозитория создайте локальную ветку patch1.
 
 script:
 ```shell
-
+$ git branch patch1
+$ git checkout patch1
+M	README.md
+Switched to branch 'patch1'
 ```
 
 

@@ -1,11 +1,9 @@
 ## Laboratory work II
 
 # Part 1
-<<<<<<< HEAD
 =======
 
 Current task: 1
->>>>>>> 1049e35 (added file .clang-format and changed the style of code)
 
 Current tasl: 3
 
@@ -111,7 +109,6 @@ Switched to branch 'patch1'
 ____
 Current task: 2
 
-<<<<<<< HEAD
 2. Внесите изменения в ветке patch1 по исправлению кода и избавления от using namespace std;.
 
 script:
@@ -168,7 +165,6 @@ Switched to branch 'patch1'
 
 
 ____
-<<<<<<< HEAD
 Current task: 6
 
 6. В локальной копии в ветке patch1 добавьте в исходный код комментарии.
@@ -362,7 +358,6 @@ Your configuration specifies to merge with the ref 'refs/heads/patch1'
 from the remote, but no such ref was fetched.
 ```
 
->>>>>>> 1049e35 (added file .clang-format and changed the style of code)
 ____
 Current task: 11
 
@@ -428,7 +423,12 @@ Current task: 2
 
 script:
 ```shell
+<<<<<<< HEAD
 $ clang-format -style=Mozilla examples/hello_world.cpp
+=======
+$ touch .clang-format
+$ clang-format -style=llvm -dump-config > .clang-format
+>>>>>>> 1b24d2d (c)
 ```
 
 
@@ -438,12 +438,15 @@ Current task: 3
 3. commit , push , создайте pull-request patch2 -> master.
 
 ```shell
+<<<<<<< HEAD
 $ git add .
 $  git commit -m "changed codestyle in file hello_world.cpp"
 [patch2 0b8df86] changed codestyle in file hello_world.cpp
  2 files changed, 32 insertions(+), 86 deletions(-)
 
 ======
+=======
+>>>>>>> 1b24d2d (c)
 $ git commit -m "added file .clang-format and changed the style of code"
 [patch2 1049e35] added file .clang-format and changed the style of code
  5 files changed, 587 insertions(+), 13 deletions(-)
@@ -596,6 +599,11 @@ script:
 ```shell
 
 ```
+=======
+Current task: 4
+
+4. В ветке мастера в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
+
 
 
 

@@ -2,17 +2,6 @@
 
 # Part 1
 
-Current task: 1
-
-1. Создайте пустой репозиторий на сервисе github.com (или gitlab.com, или bitbucket.com).
-
-
-_____
-Current task: 2
-
-2. Выполните инструкцию по созданию первого коммита на странице репозитория, созданного на предыдещем шаге.
-
-____
 Current tasl: 3
 
 3. Создайте файл hello_world.cpp в локальной копии репозитория (который должен был появиться на шаге 2). Реализуйте программу Hello world на языке C++ используя плохой стиль кода. Например, после заголовочных файлов вставьте строку using namespace std;.
@@ -66,21 +55,7 @@ Current task: 6
 
 script:
 ```shell
-$ cat > examples/hello_world.cpp <<EOF
-> #include <iostream>
-#include <string>
-
-using namespace std;
-
-int main()
-{
-        cout << "Enter your name: ";
-        string name;
-        cin >> name;
-        cout >> "Hello World from " << name << endl;
-        return 0;
-}
-> EOF
+$ nano examples/hello_world.cpp
 ```
 
 
@@ -108,13 +83,6 @@ $ git push -u origin main
 ```
 
 
-____
-Current task: 9
-
-9. Проверьте, что история коммитов доступна в удалёный репозитории.
-
-
-
 
 # Part 2
 
@@ -139,19 +107,7 @@ Current task: 2
 
 script:
 ```shell
-$ cat > examples/hello_world.cpp <<EOF
-> #include <iostream>
-#include <string>
-
-int main()          
-{         
-        std::cout << "Enter your name: ";
-        string name;
-        std::cin >> name;
-        std::cout >> "Hello World from " << name << std::endl;
-        return 0;                                   
-}
-> EOF
+$ nano examples/hello_world.cpp
 ```
 
 _____
@@ -183,38 +139,13 @@ Branch 'patch1' set up to track remote branch 'patch1' from 'origin'.
 
 
 ____
-Current task: 4
- 
- 4. Проверьте, что ветка patch1 доступна в удалёный репозитории.
-
-
-____
-Current task: 5
-
-5. Создайте pull-request patch1 -> master.
-
-
-
-____
 Current task: 6
 
 6. В локальной копии в ветке patch1 добавьте в исходный код комментарии.
 
 script:
 ```shell
-$ cat > examples/hello_world.cpp <<EOF
-> #include <iostream>
-#include <string>
-
-int main()          
-{         
-        std::cout << "Enter your name: ";
-        string name; //variable declaration
-        std::cin >> name; //name request
-        std::cout >> "Hello World from " << name << std::endl; //prints the text 
-        return 0;                                   
-}
-> EOF
+$ nano examples/hello_world.cpp
 ```
  
  
@@ -240,17 +171,6 @@ To https://github.com/Dzhamalay/lab02
    64b8385..ae9a9de  patch1 -> patch1
 Branch 'patch1' set up to track remote branch 'patch1' from 'origin'.
 ```
-
-____
-Current task: 8
-
-8. Проверьте, что новые изменения есть в созданном на шаге 5 pull-request
-
-
-____
-Current task: 9
-
-9. В удалённый репозитории выполните слияние PR patch1 -> master и удалите ветку patch1 в удаленном репозитории.
 
 
 ___
@@ -336,8 +256,21 @@ Current task: 2
 
 script:
 ```shell
-$ touch .clang-format
-$ clang-format -style=llvm -dump-config > .clang-format
+$ clang-format -style=Mozilla examples/hello_world.cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int
+main()
+{
+  cout << "Enter your name: ";
+  string name;
+  cin >> name;
+  cout >> "Hello_World from  " << name << endl;
+  return 0;
+}
 ```
 
 
@@ -374,6 +307,17 @@ ____
 Current task: 4
 
 4. В ветке мастера в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
+
+_____
+Current task: 5
+
+5. Убедитесь, что в пул-реквесте возникают конфликты .
+
+
+____
+Current task: 6
+
+6. 
 
 
 

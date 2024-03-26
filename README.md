@@ -256,8 +256,7 @@ Current task: 2
 
 script:
 ```shell
-$ touch .clang-format
-$ clang-format -style=llvm -dump-config > .clang-format
+$ clang-format -style=Mozilla examples/hello_world.cpp
 ```
 
 
@@ -267,6 +266,12 @@ Current task: 3
 3. commit , push , создайте pull-request patch2 -> master.
 
 ```shell
+$ git add .
+$  git commit -m "changed codestyle in file hello_world.cpp"
+[patch2 0b8df86] changed codestyle in file hello_world.cpp
+ 2 files changed, 32 insertions(+), 86 deletions(-)
+
+======
 $ git commit -m "added file .clang-format and changed the style of code"
 [patch2 1049e35] added file .clang-format and changed the style of code
  5 files changed, 587 insertions(+), 13 deletions(-)
@@ -291,21 +296,34 @@ Branch 'patch2' set up to track remote branch 'patch2' from 'origin'.
 
 
 ____
-Current task: 4
-
-4. В ветке мастера в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
-
-_____
-Current task: 5
-
-5. Убедитесь, что в пул-реквесте возникают конфликты .
-
-
-____
 Current task: 6
 
-6. 
+6. Для этого локально выполните pull + rebase (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты.
 
+script:
+```shell
+$ git pull
+$ nano examples/hello_world.cpp
+$ git add .
+$ git commit -m "fixed errors"
+[patch2 df4ab6f] fixed errors
+ 2 files changed, 18 insertions(+), 35 deletions(-)
+ 
+ 
+ 
+$ git rebase main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Auto-merging examples/hello_world.cpp
+CONFLICT (content): Merge conflict in examples/hello_world.cpp
+error: could not apply 1049e35... added file .clang-format and changed the style of code
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply 1049e35... added file .clang-format and changed the style of code
+
+```
 
 
 

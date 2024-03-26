@@ -257,20 +257,6 @@ Current task: 2
 script:
 ```shell
 $ clang-format -style=Mozilla examples/hello_world.cpp
-#include <iostream>
-#include <string>
-
-using namespace std;
-
-int
-main()
-{
-  cout << "Enter your name: ";
-  string name;
-  cin >> name;
-  cout >> "Hello_World from  " << name << endl;
-  return 0;
-}
 ```
 
 
@@ -280,6 +266,12 @@ Current task: 3
 3. commit , push , создайте pull-request patch2 -> master.
 
 ```shell
+$ git add .
+$  git commit -m "changed codestyle in file hello_world.cpp"
+[patch2 0b8df86] changed codestyle in file hello_world.cpp
+ 2 files changed, 32 insertions(+), 86 deletions(-)
+
+======
 $ git commit -m "added file .clang-format and changed the style of code"
 [patch2 1049e35] added file .clang-format and changed the style of code
  5 files changed, 587 insertions(+), 13 deletions(-)
@@ -304,21 +296,14 @@ Branch 'patch2' set up to track remote branch 'patch2' from 'origin'.
 
 
 ____
-Current task: 4
-
-4. В ветке мастера в удаленном репозитории измените комментарии, например, расставьте знаки препинания, переведите комментарии на другой язык.
-
-_____
-Current task: 5
-
-5. Убедитесь, что в пул-реквесте возникают конфликты .
-
-
-____
 Current task: 6
 
-6. 
+6. Для этого локально выполните pull + rebase (точную последовательность команд, следует узнать самостоятельно). Исправьте конфликты.
 
+script:
+```shell
+
+```
 
 
 

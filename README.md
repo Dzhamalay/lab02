@@ -302,14 +302,12 @@ Current task: 6
 
 script:
 ```shell
-<<<<<<< HEAD
 $ git pull
 $ nano examples/hello_world.cpp
 $ git add .
 $ git commit -m "fixed errors"
 [patch2 df4ab6f] fixed errors
  2 files changed, 18 insertions(+), 35 deletions(-)
- 
  
  
 $ git rebase main
@@ -323,8 +321,6 @@ hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
 hint: You can instead skip this commit: run "git rebase --skip".
 hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
 Could not apply 1049e35... added file .clang-format and changed the style of code
-=======
->>>>>>> df4ab6f (fixed errors)
 
 ```
 
